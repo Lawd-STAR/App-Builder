@@ -1,0 +1,201 @@
+<div class="column-layout group">
+  <div class="column-layout group_1">
+    <h6 class="content">
+      Continue learning
+    </h6>
+    <div class="row-layout group_2">
+      @for (item of learningAppCurrentlyAttending; track item) {
+        <igx-card class="card">
+          <igx-card-media height="120px" class="media-content">
+            <img [src]="item.Image" class="image" />
+          </igx-card-media>
+          <igx-card-header>
+            <h3 igxCardHeaderTitle>
+              {{ item.Course }}
+            </h3>
+            <h5 igxCardHeaderSubtitle>
+          </h5>
+          </igx-card-header>
+          <igx-card-actions class="actions-content">
+            <ng-container igxStart>
+              <button igxButton="contained" type="button" igxRipple routerLink="/courses" class="button">
+                <igx-icon>
+                  play_circle_filled
+                </igx-icon>
+                <span>Continue</span>
+              </button>
+            </ng-container>
+            <ng-container igxEnd>
+              <button igxRipple igxIconButton="flat" class="icon-button">
+                <igx-icon class="icon">
+                  check_circle_outline
+                </igx-icon>
+              </button>
+            </ng-container>
+          </igx-card-actions>
+        </igx-card>
+      }
+    </div>
+  </div>
+  <div class="column-layout group_3">
+    <h6 class="content">
+      Explore new categories
+    </h6>
+    <div class="row-layout group_4">
+      @for (item of learningAppCategories; track item) {
+        <div class="column-layout group_5">
+          <img [src]="item.Image" class="image_1" />
+          <p class="ig-typography__subtitle-1 content">
+            {{ item.Category }}
+          </p>
+        </div>
+      }
+    </div>
+  </div>
+  <div class="column-layout group_1">
+    <div class="row-layout group_6">
+      <h6 class="content">
+        Popular lecturers
+      </h6>
+      <button igxButton="flat" type="button" igxRipple class="button_1">
+        See all
+      </button>
+    </div>
+    <igx-list class="list">
+      @for (item of learningAppPopularLecturers; track item) {
+        <igx-list-item>
+          <span igxListLine>
+            <div class="row-layout group_7">
+              <div class="row-layout group_8">
+                <igx-avatar [src]="item.Avatar" shape="circle" class="avatar"></igx-avatar>
+                <div class="column-layout group_9">
+                  <p class="ig-typography__subtitle-2 content">
+                    {{ item.Lecturer }}
+                  </p>
+                  <p class="ig-typography__body-2 content_2">
+                    {{ item.Role }}
+                  </p>
+                </div>
+                <div class="row-layout rating-2">
+                  <igc-rating [ngModel]="item.Rating" class="rating"></igc-rating>
+                </div>
+                <div class="row-layout group_10">
+                  <igx-chip class="chip">
+                    {{ item.Tag }}
+                  </igx-chip>
+                </div>
+              </div>
+              <div class="row-layout group_11">
+                <button igxButton="outlined" type="button" igxRipple class="button_2">
+                  See courses
+                </button>
+              </div>
+            </div>
+          </span>
+        </igx-list-item>
+      }
+    </igx-list>
+  </div>
+</div>
+<div class="column-layout side-panel">
+  <div class="column-layout group_12">
+    <div class="row-layout group_13">
+      <img src="/assets/Avatar9.png" class="image_2" />
+    </div>
+    <div class="column-layout group_14">
+      <h5 class="content">
+        Alan Carter
+      </h5>
+      <p class="ig-typography__subtitle-2 text_1">
+        Level 3
+      </p>
+    </div>
+  </div>
+  <div class="column-layout group_15">
+    <div class="column-layout group_16">
+      <div class="row-layout group_17">
+        <img src="/assets/ranking.svg" class="image_3" />
+        <div class="column-layout group_18">
+          <div class="row-layout group_19">
+            <h6 class="h6">
+              24
+            </h6>
+            <h6 class="content_2">
+              / 90
+            </h6>
+          </div>
+          <p class="ig-typography__overline content">
+            Ranking
+          </p>
+        </div>
+      </div>
+      <div class="row-layout group_17">
+        <img src="/assets/courses.svg" class="image_3" />
+        <div class="column-layout group_18">
+          <div class="row-layout group_19">
+            <h6 class="h6">
+              4
+            </h6>
+          </div>
+          <p class="ig-typography__overline content">
+            COURSES
+          </p>
+        </div>
+      </div>
+      <div class="row-layout group_17">
+        <img src="/assets/tasks.svg" class="image_3" />
+        <div class="column-layout group_20">
+          <div class="row-layout group_19">
+            <h6 class="h6">
+              6
+            </h6>
+            <h6 class="content_2">
+              / 12
+            </h6>
+          </div>
+          <p class="ig-typography__overline content">
+            ASSIGNMENTS
+          </p>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="column-layout group_21">
+    <p class="ig-typography__subtitle-2 text">
+      Today's tasks
+    </p>
+    <div class="row-layout group_22">
+      <div class="column-layout group_23">
+        <p class="ig-typography__subtitle-2 content">
+          Build cards in Figma
+        </p>
+        <p class="ig-typography__caption text_2">
+          Due: Tomorrow
+        </p>
+      </div>
+      <igx-checkbox class="checkbox"></igx-checkbox>
+    </div>
+    <div class="row-layout group_24">
+      <div class="column-layout group_23">
+        <p class="ig-typography__subtitle-2 content">
+          Flexbox exercise
+        </p>
+        <p class="ig-typography__caption text_2">
+          Due: Sept 5th
+        </p>
+      </div>
+      <igx-checkbox class="checkbox"></igx-checkbox>
+    </div>
+    <div class="row-layout group_25">
+      <div class="column-layout group_23">
+        <p class="ig-typography__subtitle-2 content">
+          Build basic site structure
+        </p>
+        <p class="ig-typography__caption text_2">
+          Due: Sept 5th
+        </p>
+      </div>
+      <igx-checkbox class="checkbox"></igx-checkbox>
+    </div>
+  </div>
+</div>

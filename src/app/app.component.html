@@ -1,0 +1,59 @@
+<div class="column-layout group">
+  <div class="column-layout logo">
+    <img src="/assets/skillz-logo.svg" class="image" />
+    <img src="/assets/skillz-logo-text.svg" class="image_1" />
+  </div>
+  <div routerLink="/dashboard" class="column-layout group_1">
+    <button igxRipple igxIconButton="flat" class="icon-button">
+      <igx-icon class="icon">
+        dashboard
+      </igx-icon>
+    </button>
+    <p class="ig-typography__overline text">
+      Main
+    </p>
+  </div>
+  <div routerLink="/courses" class="column-layout group_1">
+    <button igxRipple igxIconButton="flat" class="icon-button">
+      <igx-icon class="icon">
+        school
+      </igx-icon>
+    </button>
+    <p class="ig-typography__overline text">
+      Courses
+    </p>
+  </div>
+  <div routerLink="/tasks" class="column-layout group_1">
+    <button igxRipple igxIconButton="flat" class="icon-button">
+      <igx-icon class="icon">
+        assignment_turned_in
+      </igx-icon>
+    </button>
+    <p class="ig-typography__overline text">
+      Tasks
+    </p>
+  </div>
+  <div routerLink="/progress" class="column-layout group_1">
+    <button igxRipple igxIconButton="flat" class="icon-button">
+      <igx-icon class="icon">
+        assessment
+      </igx-icon>
+    </button>
+    <p class="ig-typography__overline text">
+      Progress
+    </p>
+  </div>
+  <div routerLink="/profile" class="column-layout group_1">
+    <button igxRipple igxIconButton="flat" class="icon-button">
+      <igx-icon class="icon">
+        person
+      </igx-icon>
+    </button>
+    <p class="ig-typography__overline text">
+      Profile
+    </p>
+  </div>
+</div>
+<div class="view-container">
+  <router-outlet></router-outlet>
+</div>

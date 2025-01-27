@@ -1,0 +1,80 @@
+:host {
+  height: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: stretch;
+  align-content: flex-start;
+  overflow: auto;
+}
+.column-layout {
+  display: flex;
+  flex-direction: column;
+}
+.group {
+  background-color: #320653;
+  justify-content: flex-start;
+  align-items: center;
+  align-content: flex-start;
+  gap: 24px;
+  position: relative;
+  padding: 40px 24px 24px;
+  width: 100px;
+  min-width: 100px;
+  max-width: 100px;
+  flex-shrink: 0;
+}
+.logo {
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  gap: 16px;
+  position: relative;
+  margin: 0 0 40px;
+  min-width: 50px;
+  min-height: 50px;
+}
+.group_1 {
+  justify-content: center;
+  align-items: center;
+  align-content: flex-start;
+  position: relative;
+  min-width: 50px;
+  min-height: 50px;
+}
+.image {
+  object-fit: cover;
+  margin: 0 0 0 -5px;
+  width: 60px;
+  min-width: 0;
+  min-height: 0;
+  max-width: 60px;
+  flex-shrink: 0;
+}
+.image_1 {
+  object-fit: cover;
+  width: 50px;
+  min-width: 0;
+  min-height: 0;
+  max-width: 50px;
+  flex-shrink: 0;
+}
+.icon {
+  color: var(--ig-primary-500);
+}
+.text {
+  text-align: center;
+  color: var(--ig-surface-500);
+  height: max-content;
+  min-width: min-content;
+}
+.icon-button {
+  --igx-button-foreground: var(--ig-primary-500);
+}
+.view-container {
+  overflow: auto;
+  position: relative;
+  min-width: 0;
+  min-height: 0;
+  flex-grow: 1;
+  flex-basis: 0;
+}

@@ -1,0 +1,37 @@
+/* You can add global styles to this file, and also import other style files */
+
+// Standard CSS normalize, comment out if not required or using a different module
+@use "minireset.css/minireset";
+@use "igniteui-angular/theming" as *;
+
+@include core();
+@include typography($font-family: "Lato", $type-scale: $fluent-type-scale);
+
+$custom-palette: palette(
+  $primary: #F63B82,
+  $secondary: #A7438F,
+  $surface: #fff,
+  $error: #FB6559,
+  $success: #91A74F,
+  $warn: #F6B947,
+  $info: #AB8EEB);
+@include theme($palette: $custom-palette, $schema: $light-fluent-schema, $elevation: false);
+
+body {
+  background: var(--ig-surface-500);
+  color: var(--ig-surface-500-contrast);
+}
+
+html, body {
+  height: 100%;
+}
+
+.ig-typography {
+  h1, h2, h3, h4, h5, h6, p, .ig-typography__body-1 {
+    margin: 0;
+  }
+}
+
+.outer-wrapper > *:not(router-outlet) {
+  width: 100%;
+}
